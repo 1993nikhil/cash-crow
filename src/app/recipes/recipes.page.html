@@ -4,7 +4,23 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+  
+  <ion-content class="auth-form">
+    <ion-grid>
+      <ion-row>
+        <ion-col align-self-center>
+          <ion-button [routerLink]="['/registration']" expand="block" color="primary">Register</ion-button>
+  
+          <span class="divider line one-line">or</span>
+  
+          <span class="already">Already a user?</span>
+  
+          <ion-button [routerLink]="['/login']" expand="block" color="danger">Sign In</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+<!-- <ion-content>
   <ion-list>
     <ion-item  *ngFor="let recipe of recipes" [routerLink]="['./', recipe.id]">
       <ion-avatar slot="start">
@@ -13,4 +29,4 @@
       <ion-label>{{recipe.title }}</ion-label>
     </ion-item>
   </ion-list>
-</ion-content>
+</ion-content> -->
