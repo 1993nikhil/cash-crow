@@ -1,7 +1,8 @@
 {
   "name": "cash-crow-test",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }

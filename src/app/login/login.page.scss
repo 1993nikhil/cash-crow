@@ -1,0 +1,49 @@
+ion-content.background{
+  
+  // --ion-background-image:url("../../assets/image/login.jpg");
+  --background:url("src/assets/image/login.jpg");
+  position: absolute;
+  --background-repeat:no-repeat;
+  background-size: cover;
+  -webkit-background-size:cover;
+  filter: blur(10px);
+
+  ion-card {
+    position: top;
+    text-align: center;
+    margin-top: 10px;
+    background: transparent;
+  }
+
+  
+  
+ //background-image:url("https://i.pinimg.com/originals/17/94/66/179466de20ee26922f9b2309fcda7c6e.jpg");
+//--ion-background-color:none;
+}
+//.background-color{
+//  border-color: yellow;
+//	background-color:pink;
+//  color: white;
+  
+//}
+.opacity{
+  opacity: 0.3;
+}
+.opacity p{
+  color: white;
+  position: left;
+}
+
+.noblurr
+{
+  filter: blur(0px);
+}
+
+
+
+   
+  
+    
+
+
+

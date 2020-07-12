@@ -1,29 +1,32 @@
 <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-back-button></ion-back-button>
-      </ion-buttons>
-      <ion-title>Log In</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      
+      <ion-back-button></ion-back-button>
+      
+    </ion-buttons>    
+    <ion-title style="font-weight: bold;"><h5>Log In</h5></ion-title>
+  </ion-toolbar>
+</ion-header>
   
-  <ion-content>
-    <form>
-      <ion-item lines="full">
-        <ion-label position="floating">Email</ion-label>
-        <ion-input type="text" required></ion-input>
-      </ion-item>
+<ion-content padding class="background"></ion-content>
+  <div>
+    <ion-card>
+     <div class="noblurr"> 
+      <p>Email</p>
+     <input type="text" name="" id="" >
+     <p>Password</p>
+     <input type="text" name="" id="" >
+            <ion-row>
+              <ion-col>
+                <ion-button type="submit" color="danger" [routerLink]="['/messages']" expand="block" style="padding-left: 30px;padding-right: 30px;margin-top: 20px;">Sign In</ion-button>
+                <a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>
+              </ion-col>
+            </ion-row>
+      
+  </div>
   
-      <ion-item lines="full">
-        <ion-label position="floating">Password</ion-label>
-        <ion-input type="password" required></ion-input>
-      </ion-item>
+
+</ion-card>
+</div> 
   
-      <ion-row>
-        <ion-col>
-          <ion-button type="submit" color="danger" [routerLink]="['/messages']" expand="block">Sign In</ion-button>
-          <a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>
-        </ion-col>
-      </ion-row>
-    </form>
-  </ion-content>

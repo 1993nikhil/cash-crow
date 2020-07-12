@@ -16,4 +16,10 @@ export class HomePage implements OnInit {
     this.router.navigate(['/recipes']);
 
 }
+
+slideOpts={
+  initialSlide:0,
+  slidesPerView:1,
+  autoplay:true
+}
 }

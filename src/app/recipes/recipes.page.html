@@ -1,6 +1,9 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Cash Crow</ion-title>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>    
+    <ion-title style="font-weight: bold;padding-left:5px;"><h5>CashCrow</h5></ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -9,13 +12,13 @@
     <ion-grid>
       <ion-row>
         <ion-col align-self-center>
-          <ion-button [routerLink]="['/registration']" expand="block" color="primary">Register</ion-button>
+          <ion-button [routerLink]="['/registration']" expand="block" color="primary" style="padding-left: 30px;padding-right: 30px;margin-top: 15px;">Register</ion-button>
   
           <span class="divider line one-line">or</span>
   
           <span class="already">Already a user?</span>
   
-          <ion-button [routerLink]="['/login']" expand="block" color="danger">Sign In</ion-button>
+          <ion-button [routerLink]="['/login']" expand="block" color="primary" style="padding-left: 30px;padding-right: 30px;margin-top: 15px;">Sign In</ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>
