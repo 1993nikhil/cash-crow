@@ -9,24 +9,21 @@
   </ion-toolbar>
 </ion-header>
   
-<ion-content padding class="background"></ion-content>
-  <div>
-    <ion-card>
+<ion-content padding class="background">
+ <div style="height: 100%; display: flex; align-items: center; justify-content: center;">
+    <ion-card style="width:100%;align-content: left;">
      <div class="noblurr"> 
-      <p>Email</p>
-     <input type="text" name="" id="" >
-     <p>Password</p>
-     <input type="text" name="" id="" >
-            <ion-row>
-              <ion-col>
-                <ion-button type="submit" color="danger" [routerLink]="['/messages']" expand="block" style="padding-left: 30px;padding-right: 30px;margin-top: 20px;">Sign In</ion-button>
+      <p style="color: white;">Email</p>
+      <ion-input placeholder="Enter your email here" type="email" required style="color: white;"></ion-input>
+      <p style="color: white;">Password</p>
+      <ion-input placeholder="Enter your password here" type="email" required style="color: white;"></ion-input>
+                 <ion-button type="submit" color="danger" [routerLink]="['/messages']" expand="block" style="padding-left: 30px;padding-right: 30px;margin-top: 20px;">Sign In</ion-button><br>
                 <a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>
-              </ion-col>
-            </ion-row>
-      
-  </div>
-  
-
+              
+      </div>
 </ion-card>
 </div> 
+
+</ion-content>
+
   

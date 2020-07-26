@@ -1,12 +1,13 @@
 ion-content.background{
   
   // --ion-background-image:url("../../assets/image/login.jpg");
-  --background:url("src/assets/image/login.jpg");
+  --background:url("src/assets/image/loginnn_blur.jpg") no-repeat center center fixed;
   position: absolute;
   --background-repeat:no-repeat;
-  background-size: cover;
+  --background-size: cover;
   -webkit-background-size:cover;
-  filter: blur(10px);
+  
+  //filter: blur(10px);
 
   ion-card {
     position: top;
@@ -26,18 +27,14 @@ ion-content.background{
 //  color: white;
   
 //}
-.opacity{
-  opacity: 0.3;
-}
-.opacity p{
-  color: white;
-  position: left;
-}
+//.opacity{
+//  opacity: 0.3;
+//}
+//.opacity p{
+ // color: white;
+ // position: left;
+//}
 
-.noblurr
-{
-  filter: blur(0px);
-}
 
 
 
