@@ -1,0 +1,76 @@
+ion-content.backgroundScreen{
+  
+  // --ion-background-image:url("../../assets/image/login.jpg");
+  --background:url("src/assets/image/loginnn_blur.jpg") no-repeat center center fixed;
+  // position: absolute;
+  // --background-repeat:no-repeat;
+   --background-size: cover;
+  // -webkit-background-size:cover;
+
+
+
+  
+// .divider {
+//     display: flex;
+    
+//     &:before,
+//     &:after {
+//       content: "";
+//       flex: 1;
+//     }
+// }
+  
+// .line {
+//     align-items: center;
+//     margin: 1em -1em;
+//     color: #cccccc;
+    
+//     &:before,
+//     &:after {
+//       height: 1px;
+//       margin: 0 1em;
+//     }
+// } 
+
+// .one-line {
+//     &:before,
+//     &:after {
+//        background: #cccccc;
+//     }
+// }
+
+// .auth-form ion-grid,
+// .auth-form ion-row {
+//     height: 100%;
+//     justify-content: center;
+//     margin-top: 20%;
+//     overflow-y: hidden !important;
+// }
+
+// .already {
+//     display: block;
+//     text-align: center;
+//     padding-bottom: 10px;
+}
+
+
+
+.auth-form{
+  --background:url("src/assets/image/recipesss_blur.jpg") no-repeat fixed  center ;
+  // background: url('src/assets/image/recipesss_blur.jpg') ; 
+    -webkit-background-size:contain;
+    -moz-background-size: contain;
+    background-size: contain;
+   /* The image used */
+   //background: url("src/assets/image/recipess_blur.jpg");
+
+   /* Full height */
+ //  height: 100%; 
+  
+   /* Center and scale the image nicely */
+  // background-position: center;
+ //  background-repeat: none;
+  // background-size: cover;
+  
+ }
+    

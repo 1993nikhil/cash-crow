@@ -26,3 +26,7 @@
 @import "~@ionic/angular/css/flex-utils.css";
 @import "./app/home/home.page.scss";
 @import "./app/login/login.page.scss";
+
+.ion-invalid.ion-touched ion-label{
+    color: var(--ion-color-danger);
+}
