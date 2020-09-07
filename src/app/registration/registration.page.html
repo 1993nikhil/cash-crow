@@ -1,14 +1,39 @@
 <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-back-button></ion-back-button>
-      </ion-buttons>
-      <ion-title>Register</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      
+      <ion-back-button></ion-back-button>
+      
+    </ion-buttons>    
+    <ion-title style="font-weight: bold;"><h5>Registration</h5></ion-title>
+  </ion-toolbar>
+</ion-header>
   
-  <ion-content>
-    <form>
+  <ion-content padding class="regis-bckgrnd">
+
+    <div style="height: 100%; display: flex; align-items: center; justify-content:left;">
+      <ion-card style="width:100%;align-content: left;">
+        <div class="noblurr"> 
+          <p style="color: white;margin-top: 2px;">Email</p>
+          <ion-input placeholder="Enter your email here" type="email" required style="color: white;margin-top: 2px;"></ion-input>
+          <p style="color: white;margin-top: 2px;">Re-Enter Your Email</p>
+          <ion-input placeholder="Re-Enter your email here" type="email" required style="color: white;padding-top:5px;"></ion-input>
+          <p style="color: white;margin-top: 2px;">Password</p>
+         <ion-input placeholder="Enter your password here" type="password" required style="color: white;"></ion-input>
+        </div>
+        <br>
+        <div style="float: left;padding-left: 50px;">
+          <label style="size: 5px;color: white;" >
+          <input type = "checkbox">   Agree to our terms and Condition !
+        </label>
+        </div>
+        <br>
+         <div>
+       <ion-button type="submit" color="danger" [routerLink]="['/messages']" expand="block" style="padding-left: 30px;padding-right: 30px;margin-top: 20px;">Register Me</ion-button><br>
+    </div>
+      </ion-card>
+    </div>
+    <!---<form >
       <ion-item lines="full">
         <ion-label position="floating">First name</ion-label>
         <ion-input type="text" required></ion-input>
@@ -35,4 +60,5 @@
         </ion-col>
       </ion-row>
     </form>
+  -->
   </ion-content>

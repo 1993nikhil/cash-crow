@@ -13,7 +13,13 @@ export class HomePage implements OnInit {
   ngOnInit() {
   }
   navigateToLoginpage() {
-    this.router.navigate(['/recipes']);
+    this.router.navigate(['/auth']);
 
+}
+
+slideOpts={
+  initialSlide:0,
+  slidesPerView:1,
+  autoplay:true
 }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+//import { AuthService } from './recipes.service';
 import { Recipe } from './recipe.model';
 import { RecipesService } from './recipes.service';
 
@@ -7,12 +8,14 @@ import { RecipesService } from './recipes.service';
   templateUrl: './recipes.page.html',
   styleUrls: ['./recipes.page.scss'],
 })
-export class RecipesPage implements OnInit {
-  recipes: Recipe[] = [];
+
+ export class RecipesPage implements OnInit {
+   recipes: Recipe[] = [];
   constructor(private recipesService: RecipesService) { }
 
   ngOnInit() {
     this.recipes =  this.recipesService.getAllRecipes();
-  }
+ }
 
-}
+
+ }

@@ -1,17 +1,27 @@
-<ion-content>
+ <ion-header>
+    <ion-toolbar color="tertiary">
+     <ion-buttons slot="start">
+      <ion-text style="padding-left: 10px;font-weight: bold;"><h5>CashCrow</h5></ion-text>
+    </ion-buttons>
+    </ion-toolbar>
+ </ion-header>
+<ion-content >
     <div class="center logoImg">
-        <img src="./assets/image/Logo.png" style="width:80%; " />
+        <img src="./assets/image/Logo.png" style="width:50%;margin-top: 50px; " />
     </div>
     <ion-slides pager="true" [options]="slideOpts">
         <ion-slide>
-            <h2> Welcome To Cash Crow</h2>
+            <h4 style="color: white;"> Welcome To CashCrow</h4>
         </ion-slide>
         <ion-slide>
-            <h2>Share Marketing </h2>
+            <h4 style="color: white;">Share Market</h4>
         </ion-slide>
         <ion-slide>
-            <h2>Grow Money</h2>
+            <h4 style="color: white;">Grow Money</h4>
         </ion-slide>
     </ion-slides>
-    <ion-button expand="block" color="danger" (click)="navigateToLoginpage();">Start</ion-button>
+    <ion-button expand="block" color="primary" (click)="navigateToLoginpage();" style="padding-left: 30px;padding-right: 30px;margin-top: 50px;">Continue </ion-button>
 </ion-content>
+
+
+

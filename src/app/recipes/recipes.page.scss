@@ -41,3 +41,24 @@
     text-align: center;
     padding-bottom: 10px;
 }
+
+
+
+.auth-form{
+  --background:url("src/assets/image/recipesss_blur.jpg") no-repeat fixed  center ;
+  // background: url('src/assets/image/recipesss_blur.jpg') ; 
+    -webkit-background-size:contain;
+    -moz-background-size: contain;
+    background-size: contain;
+   /* The image used */
+   //background: url("src/assets/image/recipess_blur.jpg");
+
+   /* Full height */
+ //  height: 100%; 
+  
+   /* Center and scale the image nicely */
+  // background-position: center;
+ //  background-repeat: none;
+  // background-size: cover;
+ }
+    
