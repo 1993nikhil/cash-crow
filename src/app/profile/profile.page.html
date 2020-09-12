@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>My Profile</ion-title>
     <ion-buttons slot='start'>
       <ion-back-button></ion-back-button>
@@ -8,6 +8,37 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="backgroundScreen">
+  
+  <div>
+  <ion-list>
+    <ion-item  >
+    <ion-label floating  color="primary" >Name :-</ion-label>
+    <ion-input >
+    <!-- [(ngModel)] = "username" -->
+    </ion-input>
+  </ion-item >
+  
+ 
+ 
+  <ion-item  >
+    <ion-label floating  color="primary">Email :-</ion-label>
+    <ion-input>
+     <!-- [(ngModel)] = "email" -->
+     </ion-input>
+  </ion-item>
+  
+ 
+ 
+  <ion-item  >
+    <ion-label floating color="primary">Mobile :-</ion-label>
+    <ion-input >
+    <!-- [(ngModel)] = "mob" -->
+    </ion-input>
+  </ion-item>
+</ion-list>
+<ion-button (click)="view()"> Click to see User Id</ion-button>
+</div>
+  
 
 </ion-content>

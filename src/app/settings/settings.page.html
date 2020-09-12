@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>Settings</ion-title>
     <ion-buttons slot='start'>
       <ion-back-button></ion-back-button>
@@ -7,6 +7,42 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="backgroundScreen">
+  <div >
+    <ion-list >
+    <!-- Sliding item with text options on both sides -->
+    <ion-item-sliding >
+      <ion-item  >
+        <ion-label color="primary" [routerLink]="['/profile']">Change Password</ion-label>
+      </ion-item >
+      <ion-item-options side="end" >
+        <ion-item-option >Reset</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+    <ion-item-sliding >
+      <ion-item  >
+        <ion-label color="primary" [routerLink]="['/cart']">Change Profile details</ion-label>
+      </ion-item>
+      <ion-item-options side="end" >
+        <ion-item-option>Change</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+    <ion-item-sliding >
+      <ion-item  >
+        <ion-label color="primary" [routerLink]="['/cart']">General</ion-label>
+      </ion-item>
+      <ion-item-options side="end" >
+        <ion-item-option>Change</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
 
+    <!-- <ion-item color="transparent;">
+        <ion-label color="primary" [routerLink]="['/profile']">General</ion-label>
+      </ion-item>  -->
+    <!--  <ion-item-options side="end" color="transparent;">
+        <ion-item-option (click)="unread(item)">Unread</ion-item-option>
+      </ion-item-options> -->
+
+  </ion-list>
+</div>
 </ion-content>

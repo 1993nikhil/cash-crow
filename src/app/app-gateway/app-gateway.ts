@@ -3,6 +3,6 @@ import { AuthResponseData } from '../Modal/auth-response-data';
 
 
 export abstract class AppGateway {
-  abstract getLoginDetails(email,password): Observable<AuthResponseData>;
+  abstract Signup(email,password): Observable<AuthResponseData>;
   
 }

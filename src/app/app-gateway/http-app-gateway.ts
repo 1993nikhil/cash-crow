@@ -18,7 +18,7 @@ export class HttpAppGateway implements AppGateway {
 
   constructor(private httpClient: HttpClient) {}
 
-  getLoginDetails(email: string, password: string): Observable<any> {
+  Signup(email: string, password: string): Observable<any> {
     // const url = "${this.baseUri}/addLead";
     // const httpOptions = {
     //   headers: new HttpHeaders({

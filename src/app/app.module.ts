@@ -10,6 +10,7 @@ import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppGateway } from "./app-gateway/app-gateway";
 import { HttpAppGateway } from "./app-gateway/http-app-gateway";
+//import {  AuthPage } from "./auth/auth.page";
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,7 +19,8 @@ import { HttpAppGateway } from "./app-gateway/http-app-gateway";
     BrowserModule,
     HttpClientModule,
     IonicModule.forRoot(),
-    AppRoutingModule,
+    AppRoutingModule
+   // AuthPage
   ],
   providers: [
     StatusBar,
