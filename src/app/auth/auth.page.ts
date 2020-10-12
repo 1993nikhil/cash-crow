@@ -67,7 +67,8 @@ export class AuthPage implements OnInit {
               
               let message = "Hurray !! Sign Up Complete , Please set up your profile now .. ";
               this.showAlertforSignUp(message);
-              this.router.navigateByUrl("/profile");
+              this.router.navigateByUrl("/profile");      
+              
               
 
             }

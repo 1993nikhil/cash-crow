@@ -5,6 +5,25 @@
 export const environment = {
   production: false,
   firebaseAPIKey: 'AIzaSyCLvTOTOHPlASWCTkWe3V_oTMYJeuDhFvg'
+  // firebaseConfig: {
+  //   apiKey: "xxx",
+  //   authDomain: "xxxx.firebaseapp.com",
+  //   databaseURL: "https://xxxx.firebaseio.com",
+  //   projectId: "xxxx",
+  //   storageBucket: "xxxx.appspot.com",
+  //   messagingSenderId: "xxxxx"
+  // }
+};
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyCLvTOTOHPlASWCTkWe3V_oTMYJeuDhFvg",
+  authDomain: "cashcrow-c3ce7.firebaseapp.com",
+  databaseURL: "https://cashcrow-c3ce7.firebaseio.com",
+  projectId: "cashcrow-c3ce7",
+  storageBucket: "cashcrow-c3ce7.appspot.com",
+  messagingSenderId: "486438194179",
+  appId: "1:486438194179:web:e0b2954e207f3b23a5d236",
+  measurementId: "G-JWP9Q1G81E"
 };
 
 /*

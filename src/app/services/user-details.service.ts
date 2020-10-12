@@ -17,4 +17,4 @@ export class UserDetailServices {
     set userDetails(userDetails: UserDetails | undefined) {
         this._userDetails = userDetails;
     }
-} 
+}  

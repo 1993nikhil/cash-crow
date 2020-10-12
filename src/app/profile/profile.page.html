@@ -9,36 +9,43 @@
 </ion-header>
 
 <ion-content class="backgroundScreen">
-  
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" offset-md="2">
   <div>
-  <ion-list>
+    <ion-card style="background:transparent">
+  <ion-list background="transparent">
     <ion-item  >
     <ion-label floating  color="primary" >Name :-</ion-label>
-    <ion-input >
-    <!-- [(ngModel)] = "username" -->
-    </ion-input>
+    <ion-input color="primary" [(ngModel)] = "username" name="name"></ion-input>
   </ion-item >
   
  
  
   <ion-item  >
-    <ion-label floating  color="primary">Email :-</ion-label>
-    <ion-input>
-     <!-- [(ngModel)] = "email" -->
-     </ion-input>
+    <ion-label color="primary">Email :- </ion-label>
+    <ion-input color="primary" placeholder="{{email}}" disabled >
+    </ion-input>
   </ion-item>
   
  
  
   <ion-item  >
     <ion-label floating color="primary">Mobile :-</ion-label>
-    <ion-input >
-    <!-- [(ngModel)] = "mob" -->
-    </ion-input>
+    <ion-input color="primary" [(ngModel)] = "mobile" name="mobile">&nbsp;(+91) -</ion-input>
   </ion-item>
 </ion-list>
-<ion-button (click)="view()"> Click to see User Id</ion-button>
+
+</ion-card>
+<div style="text-align: center; margin-top: 10px;">
+  <ion-button (click)="update()">Update </ion-button>
+  <ion-button >Cancel</ion-button>
 </div>
+
+</div>
+</ion-col>
+</ion-row>
+</ion-grid>
   
 
 </ion-content>
