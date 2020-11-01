@@ -20,6 +20,7 @@ export class AuthPage implements OnInit {
   islogin = true;
   UID :string;
   
+  
 
   constructor(
     private authService: AuthService,
@@ -62,6 +63,7 @@ export class AuthPage implements OnInit {
             this.isLoading = false;
             loadingEl.dismiss();
             if (counter==1){
+             
               this.router.navigateByUrl("/messages");
             }else{
               

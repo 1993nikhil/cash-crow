@@ -24,7 +24,7 @@ export class AuthService {
   // private _userIsAuthenticated = false;
   // private _userId = null;
   private _user = new BehaviorSubject<User>(null);
-
+counterforprofile :any;
   get userIsAuthenticated() {
     // return this._userIsAuthenticated;
     return this._user.asObservable().pipe(
@@ -59,7 +59,7 @@ export class AuthService {
   }
   login(email: string, password: string) {
     //this._userIsAuthenticated = true;
-
+     this.counterforprofile=1;
     return this.http.post<AuthResponseData>(
       `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${environment.firebaseAPIkey}`,
       { email: email, password: password }

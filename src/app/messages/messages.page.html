@@ -8,17 +8,26 @@
 </ion-header>
 
 <ion-content>
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <ion-img src="https://akm-img-a-in.tosshub.com/sites/btmt/images/stories/investment_660_083017023050.jpg"></ion-img>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-          <ion-col>
-            <h2 style="text-align: center">Thanks!!</h2>
-            <h3 style="text-align: center">Cash Crow team welcomes you</h3>
-          </ion-col>
-        </ion-row>      
-    </ion-grid>
+
+ <ion-card >Here is the Data {{this.x}}
+  <!-- <div class="ion-padding">
+    
+    <ngx-datatable  
+      class="material"
+      [limit]="3" 
+      [rows]="rows" 
+      [rowHeight]="50" 
+      [columns]="columns"
+      [columnMode]="'force'" 
+      [sortType]="'multi'" 
+      [headerHeight]="20" 
+      [footerHeight]="20" onload="gotdata()"> {}
+      
+    </ngx-datatable>
+
+  </div>  -->
+  </ion-card>
+    <ion-grid> 
+        <ion-button (click)="datafromFirebase();">click me</ion-button>   
+    </ion-grid> 
 </ion-content>

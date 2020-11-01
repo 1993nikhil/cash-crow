@@ -17,7 +17,12 @@
   <ion-list background="transparent">
     <ion-item  >
     <ion-label floating  color="primary" >Name :-</ion-label>
-    <ion-input color="primary" [(ngModel)] = "username" name="name"></ion-input>
+    
+      <ion-input color="primary" [(ngModel)] = "username"  name="name" ></ion-input>
+     <!-- <ng-template #other_content><ion-input color='primary' >{{username}}</ion-input> </ng-template>  -->
+    
+    
+    
   </ion-item >
   
  
@@ -32,14 +37,14 @@
  
   <ion-item  >
     <ion-label floating color="primary">Mobile :-</ion-label>
-    <ion-input color="primary" [(ngModel)] = "mobile" name="mobile">&nbsp;(+91) -</ion-input>
+    <ion-input color="primary" [(ngModel)] = "mobile" name="mobile" pattern="^[0-9]{10}$">&nbsp;(+91) -</ion-input>
   </ion-item>
 </ion-list>
 
 </ion-card>
 <div style="text-align: center; margin-top: 10px;">
   <ion-button (click)="update()">Update </ion-button>
-  <ion-button >Cancel</ion-button>
+  <ion-button (click)="getdata()">Cancel</ion-button>
 </div>
 
 </div>

@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 export interface UserDetails {
     userId: string;
     email: string;
+    
 }
 
 @Injectable({providedIn: 'root'})

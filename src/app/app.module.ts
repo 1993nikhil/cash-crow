@@ -1,5 +1,5 @@
 import { HttpClientModule } from "@angular/common/http"; // Added after getting blank screen,below httpClientModule and Httpclient is also added in @ngmodule.imports
-import { NgModule } from "@angular/core";
+import {  NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { RouteReuseStrategy } from "@angular/router";
 import { IonicModule, IonicRouteStrategy } from "@ionic/angular";
@@ -14,6 +14,9 @@ import { firebaseConfig } from '../environments/environment.prod';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule} from '@angular/fire/database';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { environment } from '../environments/environment.prod';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,8 +28,9 @@ import { AngularFireDatabaseModule} from '@angular/fire/database';
     AppRoutingModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
-    AngularFireDatabaseModule
-   // AuthPage
+    AngularFireDatabaseModule,
+    AngularFirestoreModule
+    
   ],
   providers: [
     StatusBar,
@@ -35,5 +39,6 @@ import { AngularFireDatabaseModule} from '@angular/fire/database';
     { provide: AppGateway, useClass: HttpAppGateway },
   ],
   bootstrap: [AppComponent],
+  
 })
 export class AppModule {}
