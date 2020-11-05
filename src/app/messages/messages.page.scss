@@ -1,3 +1,28 @@
-ion-content{
-    --ion-background-color:white;
+ion-content.MessagebackgroundScreen{
+  
+    // --ion-background-image:url("../../assets/image/login.jpg");
+    --background:url("src/assets/image/tradecalls_blurr.jpg") no-repeat center center fixed;
+    // position: absolute;
+    // --background-repeat:no-repeat;
+     --background-size: cover;
+    // -webkit-background-size:cover;
+
+}
+.topcard{
+   padding-left: 20px; 
+   padding-top: 30px;
+   background: transparent;
+    color: white;
+}
+
+.bottomcard{
+    padding:10px;
+    padding-left: 20px; 
+   
+   background: transparent;
+    color: white;
+}
+
+.buttonclass{
+    padding-left: 20px;
 }

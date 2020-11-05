@@ -7,9 +7,9 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
- <ion-card >Here is the Data {{this.x}}
+<ion-content class="MessagebackgroundScreen">
+<ion-card class="topcard">CALLS WILL APPEAR HERE :-</ion-card>
+ <ion-card class="bottomcard"> {{this.data}}
   <!-- <div class="ion-padding">
     
     <ngx-datatable  
@@ -27,7 +27,10 @@
 
   </div>  -->
   </ion-card>
+  
     <ion-grid> 
-        <ion-button (click)="datafromFirebase();">click me</ion-button>   
+        <ion-button class="buttonclass" (click)="Refresh();">
+         Refresh
+        </ion-button>   
     </ion-grid> 
 </ion-content>
