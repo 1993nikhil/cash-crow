@@ -2,11 +2,10 @@ import { HttpClient } from "@angular/common/http";
 
 import { Component, ViewChild, OnInit } from "@angular/core";
 import { AngularFireDatabase } from "@angular/fire/database";
-import { LoadingController } from '@ionic/angular';
+import { LoadingController } from "@ionic/angular";
 import * as firebase from "firebase";
-import { url } from "inspector";
-import { interval, Observable, Subscription } from "rxjs";
 
+import { interval, Subscription } from "rxjs";
 
 // import {  } from 'rxjs';
 import { MessagePageServices } from "./message.page.service";
@@ -30,7 +29,7 @@ export class MessagesPage implements OnInit {
     private http: HttpClient,
     private db: AngularFireDatabase,
     private Msgpgsrvc: MessagePageServices,
-    public loadingctrl:LoadingController
+    public loadingctrl: LoadingController
   ) {
     {
       var database = firebase.database();
@@ -56,17 +55,17 @@ export class MessagesPage implements OnInit {
     // });
   }
 
-  Refresh(){
-    this.loadingctrl.create({keyboardClose:true,message:"Refreshing.."})
-    .then((loadingR1)=>{
-      loadingR1.present();
-  this.x=this.datafromFirebase();
-  setTimeout(() => {
-    loadingR1.dismiss();
-  }, 2000);
-  
-})
-}
+  Refresh() {
+    this.loadingctrl
+      .create({ keyboardClose: true, message: "Refreshing.." })
+      .then((loadingR1) => {
+        loadingR1.present();
+        this.x = this.datafromFirebase();
+        setTimeout(() => {
+          loadingR1.dismiss();
+        }, 2000);
+      });
+  }
 
   datafromFirebase() {
     // this.Msgpgsrvc.gotdata().subscribe(
@@ -82,9 +81,5 @@ export class MessagesPage implements OnInit {
       console.log(this.data);
       return this.data;
     });
-
-    
   }
-
-  
 }
