@@ -52,6 +52,7 @@ counterforprofile :any;
 
   constructor(private http: HttpClient, private appgateway: AppGateway) {}
   signup(email: string, password: string) {
+        this.counterforprofile=0;
     // return this.http.post<AuthResponseData>(
     //   `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${environment.firebaseAPIkey}`,
     //   { email: email, password: password, returnSecureToken: true }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { User } from "../Modal/user.model";
 import { AuthService } from "../auth/auth.service";
-//import { AuthPage } from '../auth/auth.page';
+
 import { HttpAppGateway } from "../app-gateway/http-app-gateway";
 import { AuthPage } from "../auth/auth.page";
 import { UserDetailServices } from "../services/user-details.service";
@@ -13,13 +13,11 @@ import {
 } from "@angular/fire/database";
 import { auth } from "firebase/app";
 import { Subject } from "rxjs";
-import { switchMap } from "rxjs/operators";
-import * as firebase from "firebase";
 
-import { getLocaleDateFormat } from "@angular/common";
-import { FirebaseApp } from "@angular/fire";
-import { Injectable } from "@angular/core";
-import { Keys } from "@swimlane/ngx-datatable";
+import * as firebase from "firebase";
+import { LoadingController } from '@ionic/angular';
+
+
 
 @Component({
   selector: "app-profile",
@@ -43,11 +41,21 @@ export class ProfilePage implements OnInit {
   u:any;
   t:any;
   DB:any;
+  gettingdataforreading:any;
+  p:any;
+  profname:any;
+  profmob:any;
+  datacounter=0;
+
+
+
   constructor(
     private authservice: AuthService,
     private afAuth: AngularFireAuth,
     private GateWay: HttpAppGateway,
     private userDetailsService: UserDetailServices,
+    public  loadingctrl : LoadingController,
+    
     private db: AngularFireDatabase
              ) {
                     this.userId = userDetailsService.userDetails.userId;
@@ -57,16 +65,31 @@ export class ProfilePage implements OnInit {
               };
 
   ngOnInit() {
-    
+    if (this.counter == 1)
+    {
+      {
+      this.loadingctrl
+        .create({ keyboardClose: true, message: "Refreshing Profile Data.." })
+        .then((loadingR1) => {
+          loadingR1.present();
+          this.ReadData();
+          setTimeout(() => {
+            loadingR1.dismiss();
+          }, 2000);
+        });
+    }
+  }
              };
 
 
-             check (){
-                 this.view();
-             };
-
-
-
+  check (){
+  
+ {
+  this.view();
+ }
+                 
+                //  this.ReadData();
+ }
 
   view()     {
     
@@ -80,6 +103,7 @@ export class ProfilePage implements OnInit {
                                     console.log(keyss);
                                          {
                                                   if(keyss.length>0)
+                                                  
                                                    this.delete();
                     
                  
@@ -133,6 +157,7 @@ export class ProfilePage implements OnInit {
                                                                                                   }).then(function(){
                                                                                                     refx.off('value');
                                                                                                     this.update();
+                                                                                                                                                                                                    
                                                                                                   });
                                                                 } 
                                                               }                                                 
@@ -146,8 +171,8 @@ export class ProfilePage implements OnInit {
     
   
 
-   update() {
-                     
+   update() {        
+                     this.datacounter = 1;
                      console.log("username - ", this.username);
                      console.log("Mobile - ", this.mobile);
                      this.db.list('users/').push({
@@ -155,28 +180,76 @@ export class ProfilePage implements OnInit {
                      email: this.email,
                      name: this.username,
                      mobile: this.mobile,
-                                                 });                            
-                     var database = firebase.database();
-                     var refx=database.ref('users/');
-                     refx.on('value',((fetchdata)=>{
-                                                    this.DB = fetchdata.val();
-                                                    var key = Object.keys(this.DB);
-                                                    
-                                                      for (var i =0;i<key.length;i++){
-                                                              this.t =key[i];
-                                                              
-                                                             this.u = this.DB[this.t].uid;
-                                                             console.log(this.u);
-                                                             console.log(this.userId,this.u);
-                                                                if(this.userId == this.u){
-                                                                      var NameFromFirebase = this.DB[this.t].name;
-                                                                      var Mob = this.DB[this.t].mobile;
-                                                                      console.log(NameFromFirebase, Mob);
-                                                                                    }
-                                                                                      }
-                                                   }));
 
-                                                   refx.off('value');
+                                                 });                          
+                    //  var database = firebase.database();
+                    //  var refx=database.ref('users/');
+                    //  refx.on('value',((fetchdata)=>{
+                    //                                 this.DB = fetchdata.val();
+                    //                                 var key = Object.keys(this.DB);
+                                                    
+                    //                                   for (var i =0;i<key.length;i++){
+                    //                                           this.t =key[i];
+                                                              
+                    //                                          this.u = this.DB[this.t].uid;
+                    //                                          console.log(this.u);
+                    //                                          console.log(this.userId,this.u);
+                    //                                             if(this.userId == this.u){
+                    //                                                   var NameFromFirebase = this.DB[this.t].name;
+                    //                                                   var Mob = this.DB[this.t].mobile;
+                    //                                                   console.log(NameFromFirebase, Mob);
+                    //                                                                 }
+                    //                                                                   }
+                    //                                }));
+
+                    //                                refx.off('value');
             };
+
+
+  ReadData(){
+                
+                var database = firebase.database();
+                var refer   = database.ref('users/')
+                refer.on('value',((gettingdata)=>{
+                  this.gettingdataforreading = gettingdata.val();
+                  var key = Object.keys(this.gettingdataforreading);
+                  for (var i = 0 ; i <key.length; i++){
+                    this.n = key[i];
+                    this.p = this.gettingdataforreading[this.n].uid;
+                    if(this.userId == this.p){
+                      this.profname = this.gettingdataforreading[this.n].name ;
+                       this.profmob  = this.gettingdataforreading[this.n].mobile ;
+                       console.log(this.profname,this.profmob);
+                       return (this.profmob,this.profname);
+
+                    }
+                  }
+                  
+                }));
+              }
+
+   Refresh(){
+    {
+      this.loadingctrl
+        .create({ keyboardClose: true, message: "Refreshing Profile Data.." })
+        .then((loadingR1) => {
+          loadingR1.present();
+          this.ReadData();
+          setTimeout(() => {
+            loadingR1.dismiss();
+          }, 2000);
+        });
+    }
+   }    
+
+                
+
+
+           
+
+
+
+
+
 }
 

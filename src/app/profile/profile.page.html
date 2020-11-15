@@ -4,7 +4,7 @@
     <ion-buttons slot='start'>
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    
+
   </ion-toolbar>
 </ion-header>
 
@@ -12,45 +12,76 @@
   <ion-grid>
     <ion-row>
       <ion-col size-md="6" offset-md="2">
-  <div>
-    <ion-card style="background:transparent">
-  <ion-list background="transparent">
-    <ion-item  >
-    <ion-label floating  color="primary" >Name :-</ion-label>
-    
-      <ion-input color="primary" [(ngModel)] = "username"  name="name" ></ion-input>
-     <!-- <ng-template #other_content><ion-input color='primary' >{{username}}</ion-input> </ng-template>  -->
-    
-    
-    
-  </ion-item >
-  
- 
- 
-  <ion-item  >
-    <ion-label color="primary">Email :- </ion-label>
-    <ion-input color="primary" placeholder="{{email}}" disabled >
-    </ion-input>
-  </ion-item>
-  
- 
- 
-  <ion-item  >
-    <ion-label floating color="primary">Mobile :-</ion-label>
-    <ion-input color="primary" [(ngModel)] = "mobile" name="mobile" pattern="^[0-9]{10}$">&nbsp;(+91) -</ion-input>
-  </ion-item>
-</ion-list>
+        <div>
+          <ion-card style="background:transparent">
+            <ion-list background="transparent">
+              <ion-item style="text-align: left;" *ngIf="this.counter===1">
+                <ion-label floating color="primary">Name :-</ion-label>
 
-</ion-card>
-<div style="text-align: center; margin-top: 10px;">
-  <ion-button (click)="check()">Update </ion-button>
-  <ion-button >Cancel</ion-button>
-</div>
+                <ion-label color="primary"  style="text-align:left">{{this.profname}}</ion-label>
+              </ion-item>
+              <ion-item *ngIf="this.counter===0">
+                <ion-label floating color="primary">Name :-</ion-label>
+                <ion-input color="primary" [(ngModel)]="username" name="name"></ion-input>
+                <ion-input></ion-input>
 
-</div>
-</ion-col>
-</ion-row>
-</ion-grid>
-  
+                <!-- <ng-template #other_content><ion-input color='primary' >{{username}}</ion-input> </ng-template>  -->
+
+
+
+              </ion-item>
+
+
+
+              <ion-item>
+                <ion-label color="primary">Email :- </ion-label>
+                <ion-input color="primary" placeholder="{{email}}" disabled>
+                </ion-input>
+              </ion-item>
+
+
+              <ion-item>
+                <ion-label floating color="primary">Mobile :-&nbsp;</ion-label>
+                <ion-label color="primary" *ngIf="this.counter==1">{{this.profmob}}</ion-label>
+                <ion-input color="primary" *ngIf="this.counter==0" [(ngModel)]="mobile" name="mobile" pattern="^[0-9]{10}$"></ion-input>
+              </ion-item>
+            </ion-list>
+
+          </ion-card>
+          <div style="text-align: center; margin-top: 10px;" *ngIf="this.counter==1">
+
+            <ion-button (click)="Refresh()">Refresh </ion-button>
+
+
+            <ion-button [routerLink]="['/messages']">Cancel</ion-button>
+          </div>
+          <div style="text-align: center; margin-top: 10px;" *ngIf="this.counter==0">
+            <ion-button *ngIf="this.counter==0" (click)="check()">Update </ion-button>
+            <ion-button [routerLink]="['/messages']">Cancel</ion-button>
+          </div>
+
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" offset-md="2">
+        <div>
+          <ion-card style="background:transparent">
+            <ion-list background="transparent">
+              <ion-item style="text-align: left;">
+                <p style="color:blue;">Contact us at <a href="mailto:support@cashcrow.in"
+                    style="color: turquoise;">support@cashcrow.in</a> for changing your details.</p>
+
+              </ion-item>
+            </ion-list>
+          </ion-card>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 
 </ion-content>
