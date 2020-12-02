@@ -1,6 +1,6 @@
 {
-  "appId": "com.cashcrow.test",
-  "appName": "cash-crow-test",
+  "appId": "com.cashcrow",
+  "appName": "CashCrow",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",

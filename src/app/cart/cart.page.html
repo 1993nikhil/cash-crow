@@ -1,6 +1,8 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
+    
     <ion-title>Cart</ion-title>
+
     <ion-buttons slot='start'>
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -8,6 +10,57 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="CartbackgroundScreen">
+  <ion-card style="padding-top: 30px;">
+  <ion-row style="border-bottom: groove;border-top: groove;text-align: center;">
+    <ion-col col-4 style="border-right: groove;border-left: groove;">
+    <ion-label  style="color:white">Package</ion-label>
+  </ion-col>
+  <ion-col col-4 style="border-right: groove;text-align: center;">
+    <ion-label  style="color:white">Price</ion-label>
+  </ion-col>
+    <ion-col col-4 style="border-right: groove;text-align: center;">
+    <ion-label  style="color:white" >Purchase ?</ion-label>
+  </ion-col>
+</ion-row>
+<ion-row style="border-bottom: groove;border-left: groove;border-right: groove;text-align: center;">
+    <ion-col col-4 style="padding-top: 20px;">
+    <ion-label color="primary" >Weekly</ion-label>
+  </ion-col>
+  <ion-col col-4 style=" padding-top: 20px;">
+    <ion-label color="primary" > Rs 500.00</ion-label>
+  </ion-col>
+    <ion-col col-4 style="padding-top: none;">
+      <ion-button color="primary"(click)="weekly()">Buy</ion-button>
+  </ion-col>
+</ion-row>
+<ion-row style="border-bottom: groove;border-left: groove;border-right: groove;text-align: center;">
+    <ion-col col-4 style="padding-top: 20px;">
+    <ion-label color="primary">Monthly</ion-label>
+  </ion-col>
+  <ion-col col-4 style="padding-top: 20px;">
+    <ion-label color="primary" >Rs 3000.00</ion-label>
+  </ion-col>
+    <ion-col col-4>
+      <ion-button color="primary" (click)="monthly()">Buy</ion-button>
+  </ion-col>
+</ion-row>
+<ion-row style="border-bottom: groove;border-left: groove;border-right: groove;text-align: center;">
+    <ion-col col-4 style="padding-top: 20px;">
+    <ion-label color="primary" style="text-align:justify;">Quarterly</ion-label>
+  </ion-col>
+  <ion-col col-4 style="padding-top: 20px;">
+    <ion-label color="primary"  >Rs 8500.00</ion-label>
+  </ion-col>
+    <ion-col col-4>
+    <ion-button color="primary" (click)="quarterly()">Buy</ion-button>
+  </ion-col>
+</ion-row>
+</ion-card> 
 
+<ion-card style="padding-top:30px;padding-left: 20px;padding-right:20px;background: transparent;">
+  <p style="color: white;font-size: 20px;">
+    Risk hai to Ishq hai <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.....Harshad Mehta
+  </p>
+</ion-card>
 </ion-content>
