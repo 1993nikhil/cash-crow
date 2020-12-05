@@ -1,5 +1,5 @@
 {
-  "name": "cash-crow-test",
+  "name": "CashCrow",
   "integrations": {
     "capacitor": {},
     "cordova": {}
