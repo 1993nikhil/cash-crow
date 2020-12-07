@@ -15,6 +15,7 @@ export class CartPage implements OnInit {
   UPI_NAME:string;
   TXN_Ref:string;
   currency:string='INR';
+  tid:string;
 
   constructor(private webIntent: WebIntent,
               private router   : Router) {}
@@ -22,13 +23,7 @@ export class CartPage implements OnInit {
   ngOnInit() {}
   
 weekly(){
-        //  this.totalPrice    = 10.00;
-        //  this.UPI_ID        = '07ashutosh.kumar@scb';
-        //  this.UPI_NAME      = 'ASHUTOSH%20KUMAR';
-        //  this.UPI_TXN_NOTE  = 'CashCrow-Weekly%20Package';
-        //  this.TXN_Ref       = '#Week-Cashcrow001';
-
-         const url = 'upi://pay?pa=07ashutosh.kumar@scb&pn=ASHUTOSH%20KUMAR&tid=#Cashcrow-weeklyPckg&am=10&cu=INR';
+        let url = 'upi://pay?pa=9798875584@okbizaxis&pn=Paritosh%20Pragya&tr=CahcrowWeekPckg&tid=Week-Cashcrow&am=1.00&cu=INR&tr=#Weekly';
     const options = {
       action: this.webIntent.ACTION_VIEW,
       url
@@ -37,35 +32,79 @@ weekly(){
       console.log(success);
       if(success.extras.Status == 'SUCCESS') {
         // SUCCESS RESPONSE
-        alert('Success');
-      } else if(success.extras.Status == 'SUBMITTED') {
-        // SUBMITTED RESPONSE
-        alert('Submitted');
+        alert('Thank you !! \n \n Your Payment was successful. \n Package Name :- CashCrow-Weekly ,\n Amount :- Rs 500 ,\n Payment method :- UPI\n\n Login Now...');
+        this.router.navigateByUrl("/auth");
+      
       } else if(success.extras.Status == 'Failed' || success.extras.Status == 'FAILURE') {
         // FAILED RESPONSE
-        alert('Failure Block');
+        alert('Thank you !! \n \n Your Payment failed. Please try again ');
+        this.router.navigateByUrl("/cart");
       } else {
         // FAILED RESPONSE
-        alert('Failed Completely');
+        alert('Thank you !! \n \n Your Payment failed. Please try again ');
+        this.router.navigateByUrl("/cart");
       }
     }, error => {
       console.log(error);
     });
+}
+ 
 
+ monthly(){
+  let url = 'upi://pay?pa=9798875584@okbizaxis&pn=Paritosh%20Pragya&tr=CahcrowMonthlyPackg&tid=Month-Cashcrow&am=1.00&cu=INR&tr=#Monthly';
+const options = {
+action: this.webIntent.ACTION_VIEW,
+url
+};
+this.webIntent.startActivityForResult(options).then(success => {
+console.log(success);
+if(success.extras.Status == 'SUCCESS') {
+  // SUCCESS RESPONSE
+  alert('Thank you !! \n \n Your Payment was successful. \n Package Name :- CashCrow-Monthly ,\n Amount :- Rs 3000 ,\n Payment method :- UPI\n\n Login Now...');
+  this.router.navigateByUrl("/auth");
 
-
-
-
-
+} else if(success.extras.Status == 'Failed' || success.extras.Status == 'FAILURE') {
+  // FAILED RESPONSE
+  alert('Thank you !! \n \n Your Payment failed. Please try again ');
+  this.router.navigateByUrl("/cart");
+} else {
+  // FAILED RESPONSE
+  alert('Thank you !! \n \n Your Payment failed. Please try again ');
+  this.router.navigateByUrl("/cart");
+}
+}, error => {
+console.log(error);
+});
 }
 
+quarterly(){
+  let url = 'upi://pay?pa=9798875584@okbizaxis&pn=Paritosh%20Pragya&tr=Cahcrow-Quarterly&tid=Quarter-Cashcrow&am=1.00&cu=INR&tr=#Quarterly';
+const options = {
+action: this.webIntent.ACTION_VIEW,
+url
+};
+this.webIntent.startActivityForResult(options).then(success => {
+console.log(success);
+if(success.extras.Status == 'SUCCESS') {
+  // SUCCESS RESPONSE
+  alert('Thank you !! \n \n Your Payment was successful. \n Package Name :- CashCrow-Quarterly ,\n Amount :- Rs 8500 ,\n Payment method :- UPI\n\n Login Now...');
+  this.router.navigateByUrl("/auth");
 
+} else if(success.extras.Status == 'Failed' || success.extras.Status == 'FAILURE') {
+  // FAILED RESPONSE
+  alert('Thank you !! \n \n Your Payment failed. Please try again ');
+  this.router.navigateByUrl("/cart");
+} else {
+  // FAILED RESPONSE
+  alert('Thank you !! \n \n Your Payment failed. Please try again ');
+  this.router.navigateByUrl("/cart");
+}
+}, error => {
+console.log(error);
+});
+}
 
-
-
-
-
-  }
+}
 
 //   weekly() {
 
