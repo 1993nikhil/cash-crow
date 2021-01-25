@@ -57,6 +57,10 @@ const routes: Routes = [
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then( m => m.AuthPageModule)
   },
+  {
+    path: 'push-notification-navigate',
+    loadChildren: () => import('./push-notification-navigate/push-notification-navigate.module').then( m => m.PushNotificationNavigatePageModule)
+  },
 
 ];
 

@@ -16,6 +16,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule} from '@angular/fire/database';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { environment } from '../environments/environment.prod';
+// import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { environment } from '../environments/environment.prod';
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     { provide: AppGateway, useClass: HttpAppGateway },
-    WebIntent
+    WebIntent,
+    // LocalNotifications
   ],
   bootstrap: [AppComponent],
   
