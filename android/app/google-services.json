@@ -1,0 +1,40 @@
+{
+    "project_info": {
+      "project_number": "486438194179",
+      "firebase_url": "https://cashcrow-c3ce7.firebaseio.com",
+      "project_id": "cashcrow-c3ce7",
+      "storage_bucket": "cashcrow-c3ce7.appspot.com"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:486438194179:android:cfeea658f2b95b1da5d236",
+          "android_client_info": {
+            "package_name": "in.cashcrow.team"
+          }
+        },
+        "oauth_client": [
+          {
+            "client_id": "486438194179-l76iu0avnf50iq20d14dij1827j9fngf.apps.googleusercontent.com",
+            "client_type": 3
+          }
+        ],
+        "api_key": [
+          {
+            "current_key": "AIzaSyAsZvJsjD6DxkXUCFDjWNz2Lk9Ah0v3umM"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": [
+              {
+                "client_id": "486438194179-l76iu0avnf50iq20d14dij1827j9fngf.apps.googleusercontent.com",
+                "client_type": 3
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }

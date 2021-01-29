@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { WebIntent } from "@ionic-native/web-intent/ngx";
 import { Router } from "@angular/router";
+import { URL } from "url";
 
 @Component({
   selector: "app-cart",
@@ -23,7 +24,7 @@ export class CartPage implements OnInit {
   ngOnInit() {}
   
 weekly(){
-        let url = 'upi://pay?pa=9798875584@okbizaxis&pn=Paritosh%20Pragya&tr=CahcrowWeekPckg&tid=Week-Cashcrow&am=1.00&cu=INR&tr=#Weekly';
+        let url ="upi://pay?pa=9798875584@okbizaxis&pn=Paritosh%20Pragya&mc=4900&tr=CahcrowMWeeklyPackg&tid=WeeklyCashcrow&am=1.00&cu=INR";
     const options = {
       action: this.webIntent.ACTION_VIEW,
       url
@@ -51,7 +52,8 @@ weekly(){
  
 
  monthly(){
-  let url = 'upi://pay?pa=9798875584@okbizaxis&pn=Paritosh%20Pragya&tr=CahcrowMonthlyPackg&tid=Month-Cashcrow&am=1.00&cu=INR&tr=#Monthly';
+  let url = "upi://pay?pa=9798875584@okbizaxis&pn=Paritosh%20Pragya&mc=4900&tr=CahcrowMonthlyPackg&tid=MonthlyCashcrow&am=1.00&cu=INR";
+ //let url='upi://pay?pa=9470516408@upi&pn=Ashutosh%20Kumar&tr=CahcrowWeekPckg&tid=Week-Cashcrow&am=1.00&cu=INR&tr=#Weekly';
 const options = {
 action: this.webIntent.ACTION_VIEW,
 url
@@ -65,9 +67,14 @@ if(success.extras.Status == 'SUCCESS') {
 
 } else if(success.extras.Status == 'Failed' || success.extras.Status == 'FAILURE') {
   // FAILED RESPONSE
+  
+  //  alert(JSON.stringify(success));
   alert('Thank you !! \n \n Your Payment failed. Please try again ');
   this.router.navigateByUrl("/cart");
 } else {
+  // console.log(JSON.stringify(success.extras.status));
+  // alert(JSON.stringify(success.extras.status));
+  // alert(JSON.stringify(success));
   // FAILED RESPONSE
   alert('Thank you !! \n \n Your Payment failed. Please try again ');
   this.router.navigateByUrl("/cart");
@@ -78,7 +85,7 @@ console.log(error);
 }
 
 quarterly(){
-  let url = 'upi://pay?pa=9798875584@okbizaxis&pn=Paritosh%20Pragya&tr=Cahcrow-Quarterly&tid=Quarter-Cashcrow&am=1.00&cu=INR&tr=#Quarterly';
+ let url = "upi://pay?pa=9798875584@okbizaxis&pn=Paritosh%20Pragya&mc=4900&tr=CahcrowQuarterlyPackg&tid=QuarterlyCashcrow&am=1.00&cu=INR";
 const options = {
 action: this.webIntent.ACTION_VIEW,
 url

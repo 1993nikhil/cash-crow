@@ -43,15 +43,15 @@ const routes: Routes = [
   },
   {
     path: 'profile',
-    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+    loadChildren:()=>import('./profile/profile.module').then(m=>m.ProfilePageModule)
   },
   {
     path: 'settings',
-    loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
+    loadChildren:()=>import('./settings/settings.module').then(m=>m.SettingsPageModule)
   },
   {
     path: 'cart',
-    loadChildren: () => import('./cart/cart.module').then( m => m.CartPageModule)
+    loadChildren:()=>import('./cart/cart.module').then(m=>m.CartPageModule)
   },
   {
     path: 'auth',
@@ -59,7 +59,7 @@ const routes: Routes = [
   },
   {
     path: 'push-notification-navigate',
-    loadChildren: () => import('./push-notification-navigate/push-notification-navigate.module').then( m => m.PushNotificationNavigatePageModule)
+    loadChildren: './push-notification-navigate/push-notification-navigate.module',canLoad:[AuthGuard]
   },
 
 ];

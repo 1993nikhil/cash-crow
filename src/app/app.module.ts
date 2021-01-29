@@ -38,7 +38,7 @@ import { environment } from '../environments/environment.prod';
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     { provide: AppGateway, useClass: HttpAppGateway },
-    WebIntent,
+    WebIntent
     // LocalNotifications
   ],
   bootstrap: [AppComponent],
